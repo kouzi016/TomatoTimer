@@ -9,11 +9,11 @@ import SwiftUI
 import Combine
 
 class sTime: ObservableObject {
-    @Published var today: TimeInterval = 0
-    @Published var monthly: TimeInterval = 0
-    @Published var yearly: TimeInterval = 0
+    @AppStorage("today") var today: TimeInterval = 0
+    @AppStorage("monthly") var monthly: TimeInterval = 0
+    @AppStorage("yearly") var yearly: TimeInterval = 0
     @Published var studyInterval: TimeInterval = 50 * 60
-    @Published var breakInterval: TimeInterval = 50 * 60
+    @Published var breakInterval: TimeInterval = 10 * 60
 }
 
 struct ContentView: View {
