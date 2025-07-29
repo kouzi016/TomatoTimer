@@ -12,8 +12,8 @@ class sTime: ObservableObject {
     @Published var today: TimeInterval = 0
     @Published var monthly: TimeInterval = 0
     @Published var yearly: TimeInterval = 0
-    @Published var studyInterval: TimeInterval = 1
-    @Published var breakInterval: TimeInterval = 1
+    @Published var studyInterval: TimeInterval = 50 * 60
+    @Published var breakInterval: TimeInterval = 50 * 60
 }
 
 struct ContentView: View {
