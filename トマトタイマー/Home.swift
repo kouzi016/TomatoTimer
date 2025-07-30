@@ -165,8 +165,9 @@ struct Home: View {
         }
     }
     func formatTime(_ time: TimeInterval) -> String {
-        let minutes = Int(time) / 60
-        let hours = minutes / 60
+        let totalMinutes = Int(time) / 60
+        let minutes = totalMinutes % 60
+        let hours = totalMinutes / 60
         return String(format: "%02d時間%02d分",hours, minutes)
     }
     func reset() {
