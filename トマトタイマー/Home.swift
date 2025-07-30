@@ -27,9 +27,9 @@ struct Home: View {
     @State private var timerset25 = false
     @State private var timerset50 = false
     @EnvironmentObject var stime: sTime
-    @State private var preyear: Int = 0
-    @State private var premonth: Int = 0
-    @State private var preday: Int = 0
+    @AppStorage("preyear") private var preyear: Int = 0
+    @AppStorage("premonth") private var premonth: Int = 0
+    @AppStorage("preday") private var preday: Int = 0
     
     init() {
         dateFormatter.dateFormat = "MM月dd日 E曜日"
